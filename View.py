@@ -4,17 +4,18 @@ from Dictionaris import *
 look_for_type_of_animal = 1
 look_for_owner = 2
 look_for_age = 3
-quit = 4
+look_for_obesity_animals = 4
+quit = 5
 def get_menu_choice():
     print("1. Найти животное по его типу")
     print("2. Найти животное по его владельцу")
     print("3. Найти пожилых или молодых животных")
-    print("4. Закончить работу")
+    print("4. Найти животных с ожирением")
+    print("5. Закончить работу")
     print()
     choice = int(input("Введите выбранный пункт: "))
 
     return choice
-
 
 def get_menu_choice_of_type_animals():
     print("1. Собака")
@@ -36,5 +37,9 @@ def print_of_animal(animals_list):
         print (elem)
 
 def get_adult():
-    ages = int(input("Введите год рождения Вашего животного : "))
+    ages = int(input("Введите год рождения  животного : "))
     return ages
+
+def get_indicator_of_obesity():
+    indicator = int(input("Введите показатель ожирения: "))
+    return indicator
