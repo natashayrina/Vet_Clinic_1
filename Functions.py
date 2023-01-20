@@ -3,7 +3,9 @@ from Dictionaris import *
 
 
 def main(animals_all):
-    choice: int = 0
+    ages = 0
+    choice = 0
+    indicator = 0
     while choice != quit:
         var = choice == get_menu_choice()
         if choice == look_for_type_of_animal:
@@ -15,8 +17,10 @@ def main(animals_all):
         elif choice == look_for_age:
             result = search_age(ages, animals_all)
 
-        print_of_animal(result)
+        elif choice == look_for_obesity_animals:
+            result = obesity_animals (indicator, animals_all, normal_weight = 5)
 
+        print_of_animal(result)
 
 def get_need_type():
     need_type = 0
@@ -48,6 +52,14 @@ def search_age(ages, animals_all):
             print("Животное взрослое")
         else:
             print("Животное еще молодое")
+
+def obesity_animals (indicator, animals_all, normal_weight = 5):
+    indicator = get_indicator_of_obesity()
+    list_of_obesity_cats = []
+    for elem in animals_all:
+        if elem ['type'] == 'кошка' and elem ['weight'] >= normal_weight:
+            list_of_obesity_cats. append(elem)
+    return list_of_obesity_cats
 
 
 
