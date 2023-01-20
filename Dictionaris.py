@@ -31,3 +31,10 @@ animal_15 = {'type': 'кролик', 'name': 'Филя', 'date_of_birth': 2018, 
 animals_all = [animal_1, animal_2, animal_3, animal_4, animal_5, animal_6, animal_7, animal_8, animal_9, animal_10,
                animal_11, animal_12, animal_13, animal_14,
                animal_15]
+
+for elem in animals_all:
+    elem['is_adult'] = 'False'
+
+    if elem ['date_of_birth'] <=2020:
+        elem['is_adult'] = 'True'
+print(animals_all)
