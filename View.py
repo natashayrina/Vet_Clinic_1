@@ -1,4 +1,5 @@
 from Functions import *
+from Dictionaris import *
 
 look_for_type_of_animal = 1
 look_for_owner = 2
@@ -33,3 +34,7 @@ def get_name_of_owner():
 def print_of_animal(animals_list):
     for elem in animals_list:
         print (elem)
+
+def get_adult():
+    ages = int(input("Введите год рождения Вашего животного : "))
+    return ages
